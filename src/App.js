@@ -1,13 +1,12 @@
 import './App.css';
 import { useEffect } from 'react';
-import { useTelegram } from './hooks/useTelegram';
-
+import { useTelegram } from './components/hooks/useTelegram';
 
 
 function App()  {
   const {onToogleButton, tg} = useTelegram();
 
-  useEffect( () =>{
+  useEffect(() =>{
     tg.ready();
   }, [])
 
